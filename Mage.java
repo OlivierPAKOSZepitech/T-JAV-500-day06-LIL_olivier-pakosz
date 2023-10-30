@@ -8,7 +8,9 @@ public class Mage extends Character {
         System.out.println(name + ": May the gods be with me.");
     }
 
+    @Override
     public void attack(String weapon) {
+        super.attack(weapon);
         if (weapon.equals("magic") || weapon.equals("wand")) {
             System.out.println(name + ": Feel the power of my " + weapon + "!");
         }

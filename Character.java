@@ -6,7 +6,7 @@ public abstract class Character {
     protected int wit;
     protected final String RPGClass;
 
-    protected Character (String name, String RPGClass) {
+    protected Character(String name, String RPGClass) {
         this.name = name;
         this.RPGClass = RPGClass;
         this.life = 50;
@@ -38,8 +38,7 @@ public abstract class Character {
     public String getRPGClass() {
         return RPGClass;
     }
-    public void attack(String target){
+    public void attack(String weapon) {
         System.out.println(name + ": Rrrrrrrrr....");
     }
 }
-

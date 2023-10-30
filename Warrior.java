@@ -7,8 +7,9 @@ public class Warrior extends Character {
         this.wit = 3;
         System.out.println(name + ": My name will go down in history!");
     }
-
+    @Override
     public void attack(String weapon) {
+        super.attack(weapon);
         if (weapon.equals("hammer") || weapon.equals("sword")) {
             System.out.println(name + ": I'll crush you with my " + weapon + "!");
         }
