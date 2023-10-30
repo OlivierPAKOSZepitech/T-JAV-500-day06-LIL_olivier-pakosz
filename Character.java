@@ -1,3 +1,5 @@
+import javax.sql.rowset.spi.SyncProvider;
+
 public abstract class Character implements Movable{
     protected String name;
     protected int life;
@@ -41,19 +43,22 @@ public abstract class Character implements Movable{
     public void attack(String weapon) {
         System.out.println(name + ": Rrrrrrrrr....");
     }
-    public void String moveRight(){
+    public void moveRight(){
         System.out.println(name + " moves right");
     }
 
-    public void String moveLeft(){
+    public void moveLeft(){
         System.out.println(name + " moves left");
     }
 
-    public void String moveForward(){
+    public void moveForward(){
         System.out.println(name + " moves forward");
     }
 
-    public void String moveBack(){
+    public void moveBack(){
         System.out.println(name + " moves back");
+    }
+    public final void unsheathe(){
+        System.out.println(name + ": unsheathes his weapon");
     }
 }
