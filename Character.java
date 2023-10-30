@@ -4,8 +4,7 @@ public abstract class Character {
     protected int agility;
     protected int strength;
     protected int wit;
-
-    protected String RPGClass;
+    protected final String RPGClass;
 
     protected Character (String name, String RPGClass) {
         this.name = name;
