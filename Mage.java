@@ -12,8 +12,8 @@ public class Mage extends Character {
     public void attack(String weapon) {
         
         if (weapon.equals("magic") || weapon.equals("wand")) {
-            System.out.println(name + ": Feel the power of my " + weapon + "!");
             super.attack(weapon);
+            System.out.println(name + ": Feel the power of my " + weapon + "!");
         }
     }
 
