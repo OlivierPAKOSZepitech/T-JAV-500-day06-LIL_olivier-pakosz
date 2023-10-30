@@ -38,9 +38,16 @@ public abstract class Character implements Movable{
     public String getRPGClass() {
         return RPGClass;
     }
-    public void attack(String weapon) {
-        System.out.println(name + ": Rrrrrrrrr....");
+
+    public void attack(String weapon) throws WeaponException {
+        if (weapon.isEmpty()) {
+            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
+        }
+        else {
+            System.out.println(name + ": Rrrrrrrrr....");
+        }
     }
+
     public void moveRight(){
         System.out.println(name + " moves right");
     }
@@ -56,7 +63,17 @@ public abstract class Character implements Movable{
     public void moveBack(){
         System.out.println(name + " moves back");
     }
-    public final void unsheathe(){
+
+    public final void unsheathe() {
         System.out.println(name + ": unsheathes his weapon");
+    }
+
+    public void tryToAttack(String weapon) {
+        try {
+            attack(weapon);
+            System.out.println(name + ": Successfully attacked with " + weapon);
+        } catch (WeaponException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }

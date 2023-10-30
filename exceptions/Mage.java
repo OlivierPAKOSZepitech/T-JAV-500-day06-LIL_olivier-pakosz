@@ -9,12 +9,15 @@ public class Mage extends Character {
     }
 
     @Override
-    public void attack(String weapon) {
-        
-        if (weapon.equals("magic") || weapon.equals("wand")) {
-            System.out.println(name + ": Feel the power of my " + weapon + "!");
-            super.attack(weapon);
+    public void attack(String weapon) throws WeaponException {
+        if (weapon.isEmpty()){
+            throw new WeaponException(name + ": I refuse to fight with my bare hands.");
         }
+        else {
+            super.attack(weapon); 
+            System.out.println(name + ": Feel the power of my magic!");    
+        }
+    
     }
 
     @Override
