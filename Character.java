@@ -42,19 +42,19 @@ public abstract class Character implements Movable{
         System.out.println(name + ": Rrrrrrrrr....");
     }
     public void moveRight(){
-        System.out.println(name + " moves right");
+        System.out.println(name + ": moves right");
     }
 
     public void moveLeft(){
-        System.out.println(name + " moves left");
+        System.out.println(name + ": moves left");
     }
 
     public void moveForward(){
-        System.out.println(name + " moves forward");
+        System.out.println(name + ": moves forward");
     }
 
     public void moveBack(){
-        System.out.println(name + " moves back");
+        System.out.println(name + ": moves back");
     }
     public final void unsheathe(){
         System.out.println(name + ": unsheathes his weapon");
